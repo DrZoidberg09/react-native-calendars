@@ -304,7 +304,7 @@ const CalendarList = (props: CalendarListProps & ContextProp, ref: any) => {
         ref={list}
         estimatedItemSize={400}
         windowSize={shouldUseAndroidRTLFix ? pastScrollRange + futureScrollRange + 1 : undefined}
-        style={listStyle}
+        contentContainerStyle={listStyle}
         showsVerticalScrollIndicator={showScrollIndicator}
         showsHorizontalScrollIndicator={showScrollIndicator}
         data={items}
