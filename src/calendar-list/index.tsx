@@ -4,7 +4,7 @@ import XDate from 'xdate';
 
 import React, {forwardRef, useCallback, useEffect, useImperativeHandle, useMemo, useRef, useState} from 'react';
 import {FlatList, FlatListProps, View, ViewStyle} from 'react-native';
-
+import {FlashList} from '@shopify/flash-list';
 import {extractCalendarProps, extractHeaderProps} from '../componentUpdater';
 import {parseDate, toMarkingFormat, xdateToData} from '../interface';
 import {page, sameDate, sameMonth} from '../dateutils';
@@ -299,7 +299,7 @@ const CalendarList = (props: CalendarListProps & ContextProp, ref: any) => {
 
   return (
     <View style={style.current.flatListContainer} testID={testID}>
-      <FlatList
+      <FlashList
         // @ts-expect-error
         ref={list}
         windowSize={shouldUseAndroidRTLFix ? pastScrollRange + futureScrollRange + 1 : undefined}
