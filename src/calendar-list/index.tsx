@@ -302,6 +302,7 @@ const CalendarList = (props: CalendarListProps & ContextProp, ref: any) => {
       <FlashList
         // @ts-expect-error
         ref={list}
+        estimatedItemSize={400}
         windowSize={shouldUseAndroidRTLFix ? pastScrollRange + futureScrollRange + 1 : undefined}
         style={listStyle}
         showsVerticalScrollIndicator={showScrollIndicator}
